@@ -129,7 +129,7 @@ GLOBAL_LIST_INIT(bibleitemstates, list("bible", "koran", "scrapbook", "burning",
 			var/obj/item/bodypart/affecting = X
 			if(affecting.heal_damage(heal_amt, heal_amt, null, BODYPART_ORGANIC))
 				H.update_damage_overlays()
-		H.visible_message(span_notice("[user] heals [H] with the power of [deity_name]!"))
+		H.visible_message(span_notice("[user] исцеляет [H] святой силой [deity_name]!"))
 		to_chat(H, span_boldnotice("Да исцелит тебя святая сила [deity_name]!"))
 		playsound(src.loc, "punch", 25, TRUE, -1)
 		SEND_SIGNAL(H, COMSIG_ADD_MOOD_EVENT, "blessing", /datum/mood_event/blessing)
@@ -142,7 +142,7 @@ GLOBAL_LIST_INIT(bibleitemstates, list("bible", "koran", "scrapbook", "burning",
 		return
 
 	if (HAS_TRAIT(user, TRAIT_CLUMSY) && prob(50))
-		to_chat(user, span_danger("[capitalize(src.name)] неловко выскальзывает из рук и падает тебе на голову."))
+		to_chat(user, span_danger("[capitalize(src.name)] выскальзывает из рук и падает тебе на голову."))
 		user.take_bodypart_damage(10)
 		user.Unconscious(400)
 		return
@@ -175,8 +175,8 @@ GLOBAL_LIST_INIT(bibleitemstates, list("bible", "koran", "scrapbook", "burning",
 				to_chat(C, span_danger("Ты чувствуешь себя глупее чем обычно."))
 
 		if(smack)
-			M.visible_message(span_danger("[user] beats [M] over the head with [src]!") , \
-					span_userdanger("[user] beats [M] over the head with [src]!"))
+			M.visible_message(span_danger("[user] бьет [M] по голове, используя [src]!") , \
+					span_userdanger("[user] бьет [M] по голове, используя [src]!"))
 			playsound(src.loc, "punch", 25, TRUE, -1)
 			log_combat(user, M, "атакует", src)
 
