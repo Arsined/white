@@ -1,8 +1,8 @@
 // CHAPLAIN CUSTOM ARMORS //
 
 /obj/item/clothing/head/helmet/chaplain/clock
-	name = "forgotten helmet"
-	desc = "It has the unyielding gaze of a god eternally forgotten."
+	name = "Забытый шлем"
+	desc = "У него непреклонный взгляд навечно забытого бога."
 	icon_state = "clockwork_helmet"
 	inhand_icon_state = "clockwork_helmet_inhand"
 	armor = list(MELEE = 50, BULLET = 10, LASER = 10, ENERGY = 10, BOMB = 0, BIO = 0, RAD = 0, FIRE = 80, ACID = 80)
@@ -12,8 +12,8 @@
 	dog_fashion = null
 
 /obj/item/clothing/suit/armor/riot/chaplain/clock
-	name = "forgotten armour"
-	desc = "It sounds like hissing steam, ticking cogs, gone silent, It looks like a dead machine, trying to tick with life."
+	name = "Забытая броня"
+	desc = "Звучит как шипение пара, тиканье шестерёнок и затихание. Похоже на мёртвую машину, пытающуюся жить."
 	icon_state = "clockwork_cuirass"
 	inhand_icon_state = "clockwork_cuirass_inhand"
 	allowed = list(/obj/item/storage/book/bible, /obj/item/nullrod, /obj/item/reagent_containers/food/drinks/bottle/holywater, /obj/item/storage/fancy/candle_box, /obj/item/candle, /obj/item/tank/internals/emergency_oxygen, /obj/item/tank/internals/plasmaman)
@@ -21,8 +21,8 @@
 	clothing_flags = NONE
 
 /obj/item/clothing/head/helmet/chaplain
-	name = "crusader helmet"
-	desc = "Deus Vult."
+	name = "Шлем крестоносца"
+	desc = "Деус Вульт!"
 	icon_state = "knight_templar"
 	inhand_icon_state = "knight_templar"
 	armor = list(MELEE = 50, BULLET = 10, LASER = 10, ENERGY = 10, BOMB = 0, BIO = 0, RAD = 0, FIRE = 80, ACID = 80)
@@ -32,8 +32,8 @@
 	dog_fashion = null
 
 /obj/item/clothing/suit/armor/riot/chaplain
-	name = "crusader armour"
-	desc = "God wills it!"
+	name = "Доспехи крестоносца"
+	desc = "Бог желает этого!"
 	icon_state = "knight_templar"
 	inhand_icon_state = "knight_templar"
 	allowed = list(/obj/item/storage/book/bible, /obj/item/nullrod, /obj/item/reagent_containers/food/drinks/bottle/holywater, /obj/item/storage/fancy/candle_box, /obj/item/candle, /obj/item/tank/internals/emergency_oxygen, /obj/item/tank/internals/plasmaman)
@@ -41,8 +41,8 @@
 	clothing_flags = NONE
 
 /obj/item/choice_beacon/holy
-	name = "armaments beacon"
-	desc = "Contains a set of armaments for the chaplain."
+	name = "Радиомаяк вооружения"
+	desc = "Содержит набор вооружения для капеллана."
 
 /obj/item/choice_beacon/holy/canUseBeacon(mob/living/user)
 	if(user.mind && user.mind.holy_role)
@@ -68,41 +68,41 @@
 		SSblackbox.record_feedback("tally", "chaplain_armor", 1, "[choice]")
 		GLOB.holy_armor_type = choice
 	else
-		to_chat(M, span_warning("A selection has already been made. Self-Destructing..."))
+		to_chat(M, span_warning("Выбор сделан. Самоуничтожение..."))
 		return
 
 
 /obj/item/storage/box/holy/clock
-	name = "Forgotten kit"
+	name = "Забытый набор"
 
 /obj/item/storage/box/holy/clock/PopulateContents()
 	new /obj/item/clothing/head/helmet/chaplain/clock(src)
 	new /obj/item/clothing/suit/armor/riot/chaplain/clock(src)
 
 /obj/item/storage/box/holy
-	name = "Templar Kit"
+	name = "Набор Тамплиера"
 
 /obj/item/storage/box/holy/PopulateContents()
 	new /obj/item/clothing/head/helmet/chaplain(src)
 	new /obj/item/clothing/suit/armor/riot/chaplain(src)
 
 /obj/item/storage/box/holy/student
-	name = "Profane Scholar Kit"
+	name = "Набор Оскверненного Ученого"
 
 /obj/item/storage/box/holy/student/PopulateContents()
 	new /obj/item/clothing/suit/armor/riot/chaplain/studentuni(src)
 	new /obj/item/clothing/head/helmet/chaplain/cage(src)
 
 /obj/item/clothing/suit/armor/riot/chaplain/studentuni
-	name = "student robe"
-	desc = "The uniform of a bygone institute of learning."
+	name = "Студенческая мантия"
+	desc = "Униформа древнего учебного заведения."
 	icon_state = "studentuni"
 	inhand_icon_state = "studentuni"
 	body_parts_covered = ARMS|CHEST
 
 /obj/item/clothing/head/helmet/chaplain/cage
-	name = "cage"
-	desc = "A cage that restrains the will of the self, allowing one to see the profane world for what it is."
+	name = "Клетка"
+	desc = "Клетка, сдерживающая желания личности, позволяющая увидеть нечестивый мир таким, какой он есть."
 	flags_inv = NONE
 	icon_state = "cage"
 	inhand_icon_state = "cage"
@@ -110,69 +110,68 @@
 	dynamic_hair_suffix = ""
 
 /obj/item/storage/box/holy/sentinel
-	name = "Stone Sentinel Kit"
+	name = "Набор Каменного Стража"
 
 /obj/item/storage/box/holy/sentinel/PopulateContents()
 	new /obj/item/clothing/suit/armor/riot/chaplain/ancient(src)
 	new /obj/item/clothing/head/helmet/chaplain/ancient(src)
 
 /obj/item/clothing/head/helmet/chaplain/ancient
-	name = "ancient helmet"
-	desc = "None may pass!"
+	name = "Древний шлем"
+	desc = "Никто не может пройти!"
 	icon_state = "knight_ancient"
 	inhand_icon_state = "knight_ancient"
 
 /obj/item/clothing/suit/armor/riot/chaplain/ancient
-	name = "ancient armour"
-	desc = "Defend the treasure..."
+	name = "Древний доспех"
+	desc = "Защити сокровище..."
 	icon_state = "knight_ancient"
 	inhand_icon_state = "knight_ancient"
 
 /obj/item/storage/box/holy/witchhunter
-	name = "Witchhunter Kit"
+	name = "Набор Охотника на Ведьм"
 
 /obj/item/storage/box/holy/witchhunter/PopulateContents()
 	new /obj/item/clothing/suit/armor/riot/chaplain/witchhunter(src)
 	new /obj/item/clothing/head/helmet/chaplain/witchunter_hat(src)
 
 /obj/item/clothing/suit/armor/riot/chaplain/witchhunter
-	name = "witchunter garb"
-	desc = "This worn outfit saw much use back in the day."
+	name = "Одеяние Охотника на Ведьм.
+	desc = "Это изношенное одеяние часто применялось в свое время."
 	icon_state = "witchhunter"
 	inhand_icon_state = "witchhunter"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 
 /obj/item/clothing/head/helmet/chaplain/witchunter_hat
-	name = "witchunter hat"
-	desc = "This hat saw much use back in the day."
-	icon_state = "witchhunterhat"
+	name = "Шляпа Охотника на Ведьм"
+	desc = "Эта изношенная шляпа часто применялась в свое время
 	inhand_icon_state = "witchhunterhat"
 	flags_cover = HEADCOVERSEYES
 	flags_inv = null
 
 /obj/item/storage/box/holy/adept
-	name = "Divine Adept Kit"
+	name = "Набор Божественного Адепта"
 
 /obj/item/storage/box/holy/adept/PopulateContents()
 	new /obj/item/clothing/suit/armor/riot/chaplain/adept(src)
 	new /obj/item/clothing/head/helmet/chaplain/adept(src)
 
 /obj/item/clothing/head/helmet/chaplain/adept
-	name = "adept hood"
-	desc = "Its only heretical when others do it."
+	name = "Капюшон адепта"
+	desc = "Еретично только тогда, когда это делают другие."
 	icon_state = "crusader"
 	inhand_icon_state = "crusader"
 	flags_cover = HEADCOVERSEYES
 	flags_inv = HIDEHAIR|HIDEFACE|HIDEEARS
 
 /obj/item/clothing/suit/armor/riot/chaplain/adept
-	name = "adept robes"
-	desc = "The ideal outfit for burning the unfaithful."
+	name = "Мантия адепта"
+	desc = "Идеальный наряд для сжигания неверных."
 	icon_state = "crusader"
 	inhand_icon_state = "crusader"
 
 /obj/item/storage/box/holy/follower
-	name = "Followers of the Chaplain Kit"
+	name = "Набор Последователей Капеллана"
 
 /obj/item/storage/box/holy/follower/PopulateContents()
 	new /obj/item/clothing/suit/hooded/chaplain_hoodie/leader(src)
@@ -182,8 +181,8 @@
 	new /obj/item/clothing/suit/hooded/chaplain_hoodie(src)
 
 /obj/item/storage/box/mothic_rations
-	name = "Mothic Rations Pack"
-	desc = "A box containing a few rations and some Activin gum, for keeping a starving moth going."
+	name = "Пакет с пайком для молей"
+	desc = "Коробка, содержащая несколько пайков и немного жевательной резинки Activin, чтобы поддерживать голодную моль."
 	icon_state = "moth_package"
 	illustration = null
 
@@ -197,8 +196,8 @@
 		new randomFood(src)
 	new /obj/item/storage/box/gum/wake_up(src)
 /obj/item/clothing/suit/hooded/chaplain_hoodie
-	name = "follower hoodie"
-	desc = "Hoodie made for acolytes of the chaplain."
+	name = "Толстовка последователя"
+	desc = "Толстовка сделанная для прислужников капеллана."
 	icon_state = "chaplain_hoodie"
 	inhand_icon_state = "chaplain_hoodie"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
@@ -206,30 +205,30 @@
 	hoodtype = /obj/item/clothing/head/hooded/chaplain_hood
 
 /obj/item/clothing/head/hooded/chaplain_hood
-	name = "follower hood"
-	desc = "Hood made for acolytes of the chaplain."
+	name = "Капюшон оследователя"
+	desc = "Капюшон сделанный для прислужников капеллана."
 	icon_state = "chaplain_hood"
 	body_parts_covered = HEAD
 	flags_inv = HIDEHAIR|HIDEFACE|HIDEEARS
 
 /obj/item/clothing/suit/hooded/chaplain_hoodie/leader
-	name = "leader hoodie"
-	desc = "Now you're ready for some 50 dollar bling water."
+	name = "Толстовка лидера секты"
+	desc = "Теперь вы готовы выпить блестящей воды за 50 долларов."
 	icon_state = "chaplain_hoodie_leader"
 	inhand_icon_state = "chaplain_hoodie_leader"
 	hoodtype = /obj/item/clothing/head/hooded/chaplain_hood/leader
 
 /obj/item/clothing/head/hooded/chaplain_hood/leader
-	name = "leader hood"
-	desc = "I mean, you don't /have/ to seek bling water. I just think you should."
+	name = "Капюшон лидера секты"
+	desc = "Я имею в виду, что вам не обязательно искать блестящую воду. Я просто думаю, что вы должны ее выпить."
 	icon_state = "chaplain_hood_leader"
 
 
 // CHAPLAIN NULLROD AND CUSTOM WEAPONS //
 
 /obj/item/nullrod
-	name = "null rod"
-	desc = "A rod of pure obsidian; its very presence disrupts and dampens 'magical forces'. That's what the guidebook says, anyway."
+	name = "Жезл Нулификации"
+	desc = "Жезл из чистого обсидиана. Само его присутствие разрушает и ослабляет «магические силы». Во всяком случае так написано в путеводителе."
 	icon_state = "nullrod"
 	inhand_icon_state = "nullrod"
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
@@ -250,7 +249,7 @@
 	AddComponent(/datum/component/anti_magic, TRUE, TRUE, FALSE, null, null, FALSE)
 
 /obj/item/nullrod/suicide_act(mob/user)
-	user.visible_message(span_suicide("[user] is killing [user.ru_na()]self with [src]! It looks like [user.p_theyre()] trying to get closer to god!"))
+	user.visible_message(span_suicide("[user] убивает [user.ru_na()] себя используя [src]! Похоже, что [user.p_theyre()] пытается стать ближе к богу!"))
 	return (BRUTELOSS|FIRELOSS)
 
 /obj/item/nullrod/attack_self(mob/user)
@@ -310,8 +309,8 @@
 	inhand_icon_state = "disintegrate"
 	lefthand_file = 'icons/mob/inhands/misc/touchspell_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/misc/touchspell_righthand.dmi'
-	name = "god hand"
-	desc = "This hand of yours glows with an awesome power!"
+	name = "Божья Длань"
+	desc = "Эта рука сияет с потрясающей силой!"
 	slot_flags = null
 	item_flags = ABSTRACT | DROPDEL
 	w_class = WEIGHT_CLASS_HUGE
@@ -329,8 +328,8 @@
 	inhand_icon_state = "godstaff-red"
 	lefthand_file = 'icons/mob/inhands/weapons/staves_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/staves_righthand.dmi'
-	name = "красный holy staff"
-	desc = "It has a mysterious, protective aura."
+	name = "Красный посох"
+	desc = "Обладает таинственной, защитной аурой."
 	w_class = WEIGHT_CLASS_HUGE
 	force = 5
 	slot_flags = ITEM_SLOT_BACK
@@ -343,7 +342,7 @@
 		. += mutable_appearance('icons/effects/effects.dmi', shield_icon, MOB_SHIELD_LAYER)
 
 /obj/item/nullrod/staff/blue
-	name = "синий holy staff"
+	name = "Синий посох"
 	icon_state = "godstaff-blue"
 	inhand_icon_state = "godstaff-blue"
 	shield_icon = "shield-old"
@@ -354,8 +353,8 @@
 	worn_icon_state = "claymore_gold"
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
-	name = "holy claymore"
-	desc = "A weapon fit for a crusade!"
+	name = "Священный клеймор"
+	desc = "Оружие, подходящее для крестового похода!"
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_BELT
 	block_chance = 30
@@ -371,8 +370,8 @@
 	return ..()
 
 /obj/item/nullrod/claymore/darkblade
-	name = "dark blade"
-	desc = "Spread the glory of the dark gods!"
+	name = "Темный клинок"
+	desc = "Распространяйте славу темных богов!"
 	icon_state = "cultblade"
 	inhand_icon_state = "cultblade"
 	worn_icon_state = "cultblade"
@@ -386,8 +385,8 @@
 	icon_state = "chainswordon"
 	inhand_icon_state = "chainswordon"
 	worn_icon_state = "chainswordon"
-	name = "sacred chainsaw sword"
-	desc = "Suffer not a heretic to live."
+	name = "Цепной меч"
+	desc = "Не позволь еретику жить."
 	slot_flags = ITEM_SLOT_BELT
 	attack_verb_continuous = list("пилит", "рвёт", "режет", "рубит", "делит")
 	attack_verb_simple = list("пилит", "рвёт", "режет", "рубит", "делит")
@@ -399,19 +398,19 @@
 	icon_state = "swordon"
 	inhand_icon_state = "swordon"
 	worn_icon_state = "swordon"
-	name = "force weapon"
-	desc = "The blade glows with the power of faith. Or possibly a battery."
+	name = "Силовой меч"
+	desc = "Клинок светится силой веры. Или, возможно, благодаря аккумулятору."
 
 /obj/item/nullrod/claymore/katana
-	name = "\improper Hanzo steel"
-	desc = "Capable of cutting clean through a holy claymore."
+	name = "Лезвие Ханзо"
+	desc = "Способен прорезать святой клеймор."
 	icon_state = "katana"
 	inhand_icon_state = "katana"
 	worn_icon_state = "katana"
 
 /obj/item/nullrod/claymore/multiverse
-	name = "extradimensional blade"
-	desc = "Once the harbinger of an interdimensional war, its sharpness fluctuates wildly."
+	name = "Внепространственный клинок"
+	desc = "Будучи когда-то предвестником межпространственной войны, его острота сильно колеблется."
 	icon_state = "multiverse"
 	inhand_icon_state = "multiverse"
 	worn_icon_state = "multiverse"
@@ -425,32 +424,32 @@
 	force = old_force
 
 /obj/item/nullrod/claymore/saber
-	name = "light energy sword"
+	name = "Светлый энергетический меч"
 	hitsound = 'sound/weapons/blade1.ogg'
 	icon = 'icons/obj/transforming_energy.dmi'
 	icon_state = "e_sword_on_blue"
 	inhand_icon_state = "e_sword_on_blue"
 	worn_icon_state = "swordblue"
 	slot_flags = ITEM_SLOT_BELT
-	desc = "If you strike me down, I shall become more robust than you can possibly imagine."
+	desc = "Если ты ударишь меня, я стану крепче, чем ты можешь себе представить.."
 
 /obj/item/nullrod/claymore/saber/red
-	name = "dark energy sword"
-	desc = "Woefully ineffective when used on steep terrain."
+	name = "Темный энергетический меч"
+	desc = "Ужасно неэффективен при использовании на крутой местности."
 	icon_state = "e_sword_on_red"
 	inhand_icon_state = "e_sword_on_red"
 	worn_icon_state = "swordred"
 
 /obj/item/nullrod/claymore/saber/pirate
-	name = "nautical energy sword"
-	desc = "Convincing HR that your religion involved piracy was no mean feat."
+	name = "Морской энергетический меч"
+	desc = "Убедить СБ в том, что ваша религия связана с пиратством, было непросто."
 	icon_state = "e_cutlass_on"
 	inhand_icon_state = "e_cutlass_on"
 	worn_icon_state = "swordred"
 
 /obj/item/nullrod/sord
-	name = "\improper UNREAL SORD"
-	desc = "This thing is so unspeakably HOLY you are having a hard time even holding it."
+	name = "НЕРЕАЛЬНЫЙ МЕТЧ"
+	desc = "Эта штука настолько невыразимо СВЯТАЯ, что вам трудно даже держать ее в руках."
 	icon_state = "sord"
 	inhand_icon_state = "sord"
 	worn_icon_state = "sord"
@@ -465,7 +464,7 @@
 
 /obj/item/nullrod/sord/suicide_act(mob/user) //a near-exact copy+paste of the actual sord suicide_act()
 	user.visible_message(span_suicide("[user] пытается impale [user.ru_na()]self with [src]! It might be a suicide attempt if it weren't so HOLY.") , \
-	span_suicide("Пытаюсь impale yourself with [src], but it's TOO HOLY..."))
+	span_suicide("Пытаюсь проткнуть себя [src], но он СЛИШКОМ СВЯТОЙ..."))
 	return SHAME
 
 /obj/item/nullrod/scythe
