@@ -136,7 +136,7 @@
 	new /obj/item/clothing/head/helmet/chaplain/witchunter_hat(src)
 
 /obj/item/clothing/suit/armor/riot/chaplain/witchhunter
-	name = "Одеяние Охотника на Ведьм.
+	name = "Одеяние Охотника на Ведьм."
 	desc = "Это изношенное одеяние часто применялось в свое время."
 	icon_state = "witchhunter"
 	inhand_icon_state = "witchhunter"
@@ -144,7 +144,7 @@
 
 /obj/item/clothing/head/helmet/chaplain/witchunter_hat
 	name = "Шляпа Охотника на Ведьм"
-	desc = "Эта изношенная шляпа часто применялась в свое время
+	desc = "Эта изношенная шляпа часто применялась в свое время."
 	inhand_icon_state = "witchhunterhat"
 	flags_cover = HEADCOVERSEYES
 	flags_inv = null
