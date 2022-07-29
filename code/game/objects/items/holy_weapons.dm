@@ -492,7 +492,7 @@
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
 	name = "Высокочастотный клинок"
-	desc = "Плохиая отсылка к ДНК души."
+	desc = "Плохая отсылка к ДНК души."
 	attack_verb_continuous = list("рубит", "режет", "кромсает", "зандатсуирует")
 	attack_verb_simple = list("рубит", "режет", "кромсает", "зандатсуирует")
 	hitsound = 'sound/weapons/rapierhit.ogg'
