@@ -62,7 +62,7 @@
 /datum/religion_sect/proc/can_sacrifice(obj/item/I, mob/living/chap)
 	. = TRUE
 	if(chap.mind.holy_role == HOLY_ROLE_DEACON)
-		to_chat(chap, "<span class='warning'>Я просто дьякон [GLOB.deity], и поэтому не можгу совершать обряды.")
+		to_chat(chap, "<span class='warning'>Я просто дьякон [GLOB.deity], и поэтому не могу совершать обряды.")
 		return
 	if(!is_type_in_typecache(I,desired_items_typecache))
 		return FALSE
@@ -165,7 +165,7 @@
 	var/obj/item/bodypart/bodypart = blessed.get_bodypart(chap.zone_selected)
 	if(bodypart.status != BODYPART_ROBOTIC)
 		if(!did_we_charge)
-			to_chat(chap, span_warning("[GLOB.deity] насмехается над идеей исцеления такого кожанного ублюдка!"))
+			to_chat(chap, span_warning("[GLOB.deity] насмехается над идеей исцеления такого кожаного ублюдка!"))
 		else
 			blessed.visible_message(span_notice("[chap] заряжает [blessed] святой силой [GLOB.deity]!"))
 			to_chat(blessed, span_boldnotice("Заряжаюсь святой силой[GLOB.deity]!"))
@@ -274,7 +274,8 @@
 	name = "Бог, связанный честью"
 	quote = "Необходим хороший, благородный крестовый поход против зла."
 	desc = "Ваше божество требует от вас честных поединков. Вы не можете нападать на неподготовленных, справедливых или невинных.\
-	Вы зарабатываете благосклонность, привлекая других к крестовому походу, и можете потратить благосклонность на объявление битвы, минуя некоторые условия для нападения"
+	Вы зарабатываете благосклонность, привлекая других к крестовому походу, и можете потратить благосклонность на объявление битвы,\ 
+	минуя некоторые условия для нападения"
 	tgui_icon = "scroll"
 	altar_icon_state = "convertaltar-white"
 	alignment = ALIGNMENT_GOOD
