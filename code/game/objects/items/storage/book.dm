@@ -254,7 +254,7 @@ GLOBAL_LIST_INIT(bibleitemstates, list("bible", "koran", "scrapbook", "burning",
 		if(do_after(user, 40, target = sword))
 			playsound(src,'sound/effects/pray_chaplain.ogg',60,TRUE)
 			for(var/mob/living/simple_animal/shade/S in sword.contents)
-				to_chat(S, span_userdanger("Я уничтожен экзорцизмом!"))
+				to_chat(S, span_userdanger("Уничтожен экзорцизмом!"))
 				qdel(S)
 			sword.possessed = FALSE //allows the chaplain (or someone else) to reroll a new spirit for their sword
 			sword.name = initial(sword.name)
@@ -286,7 +286,7 @@ GLOBAL_LIST_INIT(bibleitemstates, list("bible", "koran", "scrapbook", "burning",
 	if (uses)
 		H.mind.holy_role = HOLY_ROLE_PRIEST
 		uses -= 1
-		to_chat(H, span_userdanger("Пытаюсь открыть книгу НО ОНА КУСАЕТ ТЕБЯ!"))
+		to_chat(H, span_userdanger("Пытаюсь открыть книгу НО ОНА КУСАЕТСЯ!"))
 		playsound(src.loc, 'sound/effects/snap.ogg', 50, TRUE)
 		H.apply_damage(5, BRUTE, pick(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM))
 		to_chat(H, span_notice("Ваше имя написано на внутренней стороне обложки кровью.."))
