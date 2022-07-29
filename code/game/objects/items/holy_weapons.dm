@@ -205,7 +205,7 @@
 	hoodtype = /obj/item/clothing/head/hooded/chaplain_hood
 
 /obj/item/clothing/head/hooded/chaplain_hood
-	name = "Капюшон оследователя"
+	name = "Капюшон последователя"
 	desc = "Капюшон сделанный для прислужников капеллана."
 	icon_state = "chaplain_hood"
 	body_parts_covered = HEAD
@@ -431,7 +431,7 @@
 	inhand_icon_state = "e_sword_on_blue"
 	worn_icon_state = "swordblue"
 	slot_flags = ITEM_SLOT_BELT
-	desc = "Если ты ударишь меня, я стану крепче, чем ты можешь себе представить.."
+	desc = "Если ты ударишь меня, я стану крепче, чем ты можешь себе представить."
 
 /obj/item/nullrod/claymore/saber/red
 	name = "Темный энергетический меч"
