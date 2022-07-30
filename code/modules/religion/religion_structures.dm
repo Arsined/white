@@ -1,5 +1,5 @@
 /obj/structure/altar_of_gods
-	name = "\improper Алтарь богов"
+	name = "алтарь богов"
 	desc = "Алтарь, который позволяет главе церкви выбирать секту религиозных учений, а также приносить жертвы, чтобы заслужить благосклонность."
 	icon = 'icons/obj/hand_of_god_structures.dmi'
 	icon_state = "convertaltar"
@@ -53,7 +53,7 @@
 	add_overlay("convertaltarcandle")
 
 /obj/item/ritual_totem
-	name = "Ритуальный тотем"
+	name = "ритуальный тотем"
 	desc = "Деревянный тотем со странной резьбой на нем."
 	icon_state = "ritual_totem"
 	inhand_icon_state = "sheet-wood"
@@ -85,18 +85,18 @@
 	. = ..()
 	var/is_holy = user.mind?.holy_role
 	if(is_holy)
-		. += span_notice("[src] может быть перемещен только важным последователем [GLOB.deity].")
+		. += span_notice("[src] может быть перемещен только последователем [GLOB.deity] с высоким саном.")
 
 /obj/item/ritual_totem/pickup(mob/taker)
 	var/initial_loc = loc
 	var/holiness = taker.mind?.holy_role
 	var/no_take = FALSE
 	if(holiness == NONE)
-		to_chat(taker, span_warning("Как ни старайся, похоже, ты не в состоянии поднять [src]!"))
+		to_chat(taker, span_warning("Как бы я ни старался, у меня не получается поднять [src]!"))
 		no_take = TRUE
 	else if(holiness == HOLY_ROLE_DEACON) //deacons cannot pick them up either
 		no_take = TRUE
-		to_chat(taker, span_warning("Вы не можете поднять [src]. Кажется, ты недостаточно важен [GLOB.deity] чтобы сделать это."))
+		to_chat(taker, span_warning("Не могу поднять [src]. Мой сан [GLOB.deity] слишком низок чтобы сделать это."))
 	..()
 	if(no_take)
 		taker.dropItemToGround(src)

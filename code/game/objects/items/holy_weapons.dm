@@ -1,7 +1,7 @@
 // CHAPLAIN CUSTOM ARMORS //
 
 /obj/item/clothing/head/helmet/chaplain/clock
-	name = "Забытый шлем"
+	name = "забытый шлем"
 	desc = "У него непреклонный взгляд навечно забытого бога."
 	icon_state = "clockwork_helmet"
 	inhand_icon_state = "clockwork_helmet_inhand"
@@ -12,7 +12,7 @@
 	dog_fashion = null
 
 /obj/item/clothing/suit/armor/riot/chaplain/clock
-	name = "Забытая броня"
+	name = "забытая броня"
 	desc = "Звучит как шипение пара, тиканье шестерёнок и затихание. Похоже на мёртвую машину, пытающуюся жить."
 	icon_state = "clockwork_cuirass"
 	inhand_icon_state = "clockwork_cuirass_inhand"
@@ -21,7 +21,7 @@
 	clothing_flags = NONE
 
 /obj/item/clothing/head/helmet/chaplain
-	name = "Шлем крестоносца"
+	name = "шлем крестоносца"
 	desc = "Деус Вульт!"
 	icon_state = "knight_templar"
 	inhand_icon_state = "knight_templar"
@@ -32,7 +32,7 @@
 	dog_fashion = null
 
 /obj/item/clothing/suit/armor/riot/chaplain
-	name = "Доспехи крестоносца"
+	name = "доспехи крестоносца"
 	desc = "Бог желает этого!"
 	icon_state = "knight_templar"
 	inhand_icon_state = "knight_templar"
@@ -41,7 +41,7 @@
 	clothing_flags = NONE
 
 /obj/item/choice_beacon/holy
-	name = "Радиомаяк вооружения"
+	name = "радиомаяк вооружения"
 	desc = "Содержит набор вооружения для капеллана."
 
 /obj/item/choice_beacon/holy/canUseBeacon(mob/living/user)
@@ -73,35 +73,35 @@
 
 
 /obj/item/storage/box/holy/clock
-	name = "Забытый набор"
+	name = "забытый набор"
 
 /obj/item/storage/box/holy/clock/PopulateContents()
 	new /obj/item/clothing/head/helmet/chaplain/clock(src)
 	new /obj/item/clothing/suit/armor/riot/chaplain/clock(src)
 
 /obj/item/storage/box/holy
-	name = "Набор Тамплиера"
+	name = "набор Тамплиера"
 
 /obj/item/storage/box/holy/PopulateContents()
 	new /obj/item/clothing/head/helmet/chaplain(src)
 	new /obj/item/clothing/suit/armor/riot/chaplain(src)
 
 /obj/item/storage/box/holy/student
-	name = "Набор Оскверненного Ученого"
+	name = "набор Оскверненного Ученого"
 
 /obj/item/storage/box/holy/student/PopulateContents()
 	new /obj/item/clothing/suit/armor/riot/chaplain/studentuni(src)
 	new /obj/item/clothing/head/helmet/chaplain/cage(src)
 
 /obj/item/clothing/suit/armor/riot/chaplain/studentuni
-	name = "Студенческая мантия"
+	name = "студенческая мантия"
 	desc = "Униформа древнего учебного заведения."
 	icon_state = "studentuni"
 	inhand_icon_state = "studentuni"
 	body_parts_covered = ARMS|CHEST
 
 /obj/item/clothing/head/helmet/chaplain/cage
-	name = "Клетка"
+	name = "клетка"
 	desc = "Клетка, сдерживающая желания личности, позволяющая увидеть нечестивый мир таким, какой он есть."
 	flags_inv = NONE
 	icon_state = "cage"
@@ -110,54 +110,54 @@
 	dynamic_hair_suffix = ""
 
 /obj/item/storage/box/holy/sentinel
-	name = "Набор Каменного Стража"
+	name = "набор Каменного Стража"
 
 /obj/item/storage/box/holy/sentinel/PopulateContents()
 	new /obj/item/clothing/suit/armor/riot/chaplain/ancient(src)
 	new /obj/item/clothing/head/helmet/chaplain/ancient(src)
 
 /obj/item/clothing/head/helmet/chaplain/ancient
-	name = "Древний шлем"
+	name = "древний шлем"
 	desc = "Никто не может пройти!"
 	icon_state = "knight_ancient"
 	inhand_icon_state = "knight_ancient"
 
 /obj/item/clothing/suit/armor/riot/chaplain/ancient
-	name = "Древний доспех"
+	name = "древний доспех"
 	desc = "Защити сокровище..."
 	icon_state = "knight_ancient"
 	inhand_icon_state = "knight_ancient"
 
 /obj/item/storage/box/holy/witchhunter
-	name = "Набор Охотника на Ведьм"
+	name = "набор Охотника на Ведьм"
 
 /obj/item/storage/box/holy/witchhunter/PopulateContents()
 	new /obj/item/clothing/suit/armor/riot/chaplain/witchhunter(src)
 	new /obj/item/clothing/head/helmet/chaplain/witchunter_hat(src)
 
 /obj/item/clothing/suit/armor/riot/chaplain/witchhunter
-	name = "Одеяние Охотника на Ведьм."
+	name = "одеяние Охотника на Ведьм."
 	desc = "Это изношенное одеяние часто применялось в свое время."
 	icon_state = "witchhunter"
 	inhand_icon_state = "witchhunter"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 
 /obj/item/clothing/head/helmet/chaplain/witchunter_hat
-	name = "Шляпа Охотника на Ведьм"
+	name = "шляпа Охотника на Ведьм"
 	desc = "Эта изношенная шляпа часто применялась в свое время."
 	inhand_icon_state = "witchhunterhat"
 	flags_cover = HEADCOVERSEYES
 	flags_inv = null
 
 /obj/item/storage/box/holy/adept
-	name = "Набор Божественного Адепта"
+	name = "набор Божественного Адепта"
 
 /obj/item/storage/box/holy/adept/PopulateContents()
 	new /obj/item/clothing/suit/armor/riot/chaplain/adept(src)
 	new /obj/item/clothing/head/helmet/chaplain/adept(src)
 
 /obj/item/clothing/head/helmet/chaplain/adept
-	name = "Капюшон адепта"
+	name = "капюшон адепта"
 	desc = "Еретично только тогда, когда это делают другие."
 	icon_state = "crusader"
 	inhand_icon_state = "crusader"
@@ -165,13 +165,13 @@
 	flags_inv = HIDEHAIR|HIDEFACE|HIDEEARS
 
 /obj/item/clothing/suit/armor/riot/chaplain/adept
-	name = "Мантия адепта"
+	name = "мантия адепта"
 	desc = "Идеальный наряд для сжигания неверных."
 	icon_state = "crusader"
 	inhand_icon_state = "crusader"
 
 /obj/item/storage/box/holy/follower
-	name = "Набор Последователей Капеллана"
+	name = "набор Последователей Капеллана"
 
 /obj/item/storage/box/holy/follower/PopulateContents()
 	new /obj/item/clothing/suit/hooded/chaplain_hoodie/leader(src)
@@ -181,7 +181,7 @@
 	new /obj/item/clothing/suit/hooded/chaplain_hoodie(src)
 
 /obj/item/storage/box/mothic_rations
-	name = "Пакет с пайком для молей"
+	name = "пакет с пайком для молей"
 	desc = "Коробка, содержащая несколько пайков и немного жевательной резинки Activin, чтобы поддерживать голодную моль."
 	icon_state = "moth_package"
 	illustration = null
@@ -196,7 +196,7 @@
 		new randomFood(src)
 	new /obj/item/storage/box/gum/wake_up(src)
 /obj/item/clothing/suit/hooded/chaplain_hoodie
-	name = "Толстовка последователя"
+	name = "толстовка последователя"
 	desc = "Толстовка сделанная для прислужников капеллана."
 	icon_state = "chaplain_hoodie"
 	inhand_icon_state = "chaplain_hoodie"
@@ -205,21 +205,21 @@
 	hoodtype = /obj/item/clothing/head/hooded/chaplain_hood
 
 /obj/item/clothing/head/hooded/chaplain_hood
-	name = "Капюшон последователя"
+	name = "капюшон последователя"
 	desc = "Капюшон сделанный для прислужников капеллана."
 	icon_state = "chaplain_hood"
 	body_parts_covered = HEAD
 	flags_inv = HIDEHAIR|HIDEFACE|HIDEEARS
 
 /obj/item/clothing/suit/hooded/chaplain_hoodie/leader
-	name = "Толстовка лидера секты"
+	name = "толстовка лидера секты"
 	desc = "Теперь вы готовы выпить блестящей воды за 50 долларов."
 	icon_state = "chaplain_hoodie_leader"
 	inhand_icon_state = "chaplain_hoodie_leader"
 	hoodtype = /obj/item/clothing/head/hooded/chaplain_hood/leader
 
 /obj/item/clothing/head/hooded/chaplain_hood/leader
-	name = "Капюшон лидера секты"
+	name = "капюшон лидера секты"
 	desc = "Я имею в виду, что вам не обязательно искать блестящую воду. Я просто думаю, что вы должны ее выпить."
 	icon_state = "chaplain_hood_leader"
 
@@ -227,7 +227,7 @@
 // CHAPLAIN NULLROD AND CUSTOM WEAPONS //
 
 /obj/item/nullrod
-	name = "Жезл Нулификации"
+	name = "жезл Нулификации"
 	desc = "Жезл из чистого обсидиана. Само его присутствие разрушает и ослабляет «магические силы». Во всяком случае так написано в путеводителе."
 	icon_state = "nullrod"
 	inhand_icon_state = "nullrod"
@@ -309,7 +309,7 @@
 	inhand_icon_state = "disintegrate"
 	lefthand_file = 'icons/mob/inhands/misc/touchspell_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/misc/touchspell_righthand.dmi'
-	name = "Божья Длань"
+	name = "божья Длань"
 	desc = "Эта рука сияет с потрясающей силой!"
 	slot_flags = null
 	item_flags = ABSTRACT | DROPDEL
@@ -328,7 +328,7 @@
 	inhand_icon_state = "godstaff-red"
 	lefthand_file = 'icons/mob/inhands/weapons/staves_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/staves_righthand.dmi'
-	name = "Красный посох"
+	name = "красный посох"
 	desc = "Обладает таинственной, защитной аурой."
 	w_class = WEIGHT_CLASS_HUGE
 	force = 5
@@ -342,7 +342,7 @@
 		. += mutable_appearance('icons/effects/effects.dmi', shield_icon, MOB_SHIELD_LAYER)
 
 /obj/item/nullrod/staff/blue
-	name = "Синий посох"
+	name = "синий посох"
 	icon_state = "godstaff-blue"
 	inhand_icon_state = "godstaff-blue"
 	shield_icon = "shield-old"
@@ -353,7 +353,7 @@
 	worn_icon_state = "claymore_gold"
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
-	name = "Священный клеймор"
+	name = "священный клеймор"
 	desc = "Оружие, подходящее для крестового похода!"
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_BELT
@@ -370,7 +370,7 @@
 	return ..()
 
 /obj/item/nullrod/claymore/darkblade
-	name = "Темный клинок"
+	name = "темный клинок"
 	desc = "Распространяйте славу темных богов!"
 	icon_state = "cultblade"
 	inhand_icon_state = "cultblade"
@@ -385,7 +385,7 @@
 	icon_state = "chainswordon"
 	inhand_icon_state = "chainswordon"
 	worn_icon_state = "chainswordon"
-	name = "Цепной меч"
+	name = "цепной меч"
 	desc = "Не позволь еретику жить."
 	slot_flags = ITEM_SLOT_BELT
 	attack_verb_continuous = list("пилит", "рвёт", "режет", "рубит", "делит")
@@ -398,18 +398,18 @@
 	icon_state = "swordon"
 	inhand_icon_state = "swordon"
 	worn_icon_state = "swordon"
-	name = "Силовой меч"
+	name = "силовой меч"
 	desc = "Клинок светится силой веры. Или, возможно, благодаря аккумулятору."
 
 /obj/item/nullrod/claymore/katana
-	name = "Лезвие Ханзо"
+	name = "лезвие Ханзо"
 	desc = "Способен прорезать святой клеймор."
 	icon_state = "katana"
 	inhand_icon_state = "katana"
 	worn_icon_state = "katana"
 
 /obj/item/nullrod/claymore/multiverse
-	name = "Внепространственный клинок"
+	name = "внепространственный клинок"
 	desc = "Будучи когда-то предвестником межпространственной войны, его острота сильно колеблется."
 	icon_state = "multiverse"
 	inhand_icon_state = "multiverse"
@@ -424,24 +424,24 @@
 	force = old_force
 
 /obj/item/nullrod/claymore/saber
-	name = "Светлый энергетический меч"
+	name = "светлый энергетический меч"
 	hitsound = 'sound/weapons/blade1.ogg'
 	icon = 'icons/obj/transforming_energy.dmi'
 	icon_state = "e_sword_on_blue"
 	inhand_icon_state = "e_sword_on_blue"
 	worn_icon_state = "swordblue"
 	slot_flags = ITEM_SLOT_BELT
-	desc = "Если ты ударишь меня, я стану крепче, чем ты можешь себе представить."
+	desc = "Используй силу, юный падаван."
 
 /obj/item/nullrod/claymore/saber/red
-	name = "Темный энергетический меч"
-	desc = "Ужасно неэффективен при использовании на крутой местности."
+	name = "темный энергетический меч"
+	desc = "Переходи на темную сторону!"
 	icon_state = "e_sword_on_red"
 	inhand_icon_state = "e_sword_on_red"
 	worn_icon_state = "swordred"
 
 /obj/item/nullrod/claymore/saber/pirate
-	name = "Морской энергетический меч"
+	name = "морской энергетический меч"
 	desc = "Убедить СБ в том, что ваша религия связана с пиратством, было непросто."
 	icon_state = "e_cutlass_on"
 	inhand_icon_state = "e_cutlass_on"
@@ -472,7 +472,7 @@
 	inhand_icon_state = "scythe1"
 	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
-	name = "Коса жнеца"
+	name = "коса жнеца"
 	desc = "И жрец, и жнец, и на дуде игрец!"
 	w_class = WEIGHT_CLASS_BULKY
 	armour_penetration = 35
@@ -491,7 +491,7 @@
 	worn_icon_state = "hfrequency0"
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
-	name = "Высокочастотный клинок"
+	name = "высокочастотный клинок"
 	desc = "Плохая отсылка к ДНК души."
 	attack_verb_continuous = list("рубит", "режет", "кромсает", "зандатсуирует")
 	attack_verb_simple = list("рубит", "режет", "кромсает", "зандатсуирует")
@@ -504,7 +504,7 @@
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
 	worn_icon_state = "spellblade"
 	icon = 'icons/obj/guns/magic.dmi'
-	name = "Дремлющий клинок заклинаний"
+	name = "дремлющий клинок заклинаний"
 	desc = "Клинок дает владельцу почти безграничную силу... если он сможет понять, как его включить."
 	hitsound = 'sound/weapons/rapierhit.ogg'
 
@@ -514,7 +514,7 @@
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
 	worn_icon_state = "talking_sword"
-	name = "Одержимый клинок"
+	name = "одержимый клинок"
 	desc = "Когда на станции царит хаос, приятно иметь рядом друга."
 	attack_verb_continuous = list("рубит", "нарезает", "режет")
 	attack_verb_simple = list("рубит", "нарезает", "режет")
@@ -565,7 +565,7 @@
 	icon_state = "chainswordon"
 	inhand_icon_state = "chainswordon"
 	worn_icon_state = "chainswordon"
-	name = "Одержимый цепной меч"
+	name = "одержимый цепной меч"
 	desc = "Не позволь еретику жить."
 	chaplain_spawnable = FALSE
 	force = 30
@@ -577,7 +577,7 @@
 	toolspeed = 0.5 //faster than normal saw
 
 /obj/item/nullrod/hammmer
-	name = "Реликтовый боевой молот"
+	name = "реликтовый боевой молот"
 	desc = "Этот боевой молот обошелся капеллану в сорок тысяч кредитов."
 	icon_state = "hammeron"
 	inhand_icon_state = "hammeron"
@@ -589,7 +589,7 @@
 	attack_verb_simple = list("лупит", "бьёт", "молотит", "уничтожает")
 
 /obj/item/nullrod/chainsaw
-	name = "Рука-бензопила"
+	name = "рука-бензопила"
 	desc = "Добро? Зло? Ты парень с бензопилой в руке."
 	icon_state = "chainsaw_on"
 	inhand_icon_state = "mounted_chainsaw"
@@ -611,7 +611,7 @@
 	AddComponent(/datum/component/butchering, 30, 100, 0, hitsound)
 
 /obj/item/nullrod/clown
-	name = "Клоунский кинжал"
+	name = "клоунский кинжал"
 	desc = "Используется для веселых жертвоприношений."
 	icon = 'icons/obj/wizard.dmi'
 	icon_state = "clownrender"
@@ -625,7 +625,7 @@
 #define CHEMICAL_TRANSFER_CHANCE 30
 
 /obj/item/nullrod/pride_hammer
-	name = "Молот, пораженный гордыней"
+	name = "горделивый молот"
 	desc = "Он резонирует аурой Гордости."
 	icon_state = "pride"
 	inhand_icon_state = "pride"
@@ -654,7 +654,7 @@
 #undef CHEMICAL_TRANSFER_CHANCE
 
 /obj/item/nullrod/whip
-	name = "Святая плеть"
+	name = "священная плеть"
 	desc = "Какая ужасная ночь на космической станции 13."
 	icon_state = "chain"
 	inhand_icon_state = "chain"
@@ -667,7 +667,7 @@
 	hitsound = 'sound/weapons/chainhit.ogg'
 
 /obj/item/nullrod/fedora
-	name = "Атеистическая федора"
+	name = "атеистическая федора"
 	desc = "Поля шляпы столь же остры, как и ваш ум. Эти поля причинили бы почти такую же боль, как и опровержение существования Бога."
 	icon_state = "fedora"
 	inhand_icon_state = "fedora"
@@ -682,7 +682,7 @@
 	attack_verb_simple = list("просветляет", "краснопилюлит")
 
 /obj/item/nullrod/armblade
-	name = "Темное благословение"
+	name = "темное благословение"
 	desc = "Особо извращенные божества дарят дары сомнительной ценности."
 	icon = 'icons/obj/changeling_items.dmi'
 	icon_state = "arm_blade"
@@ -702,12 +702,12 @@
 	AddComponent(/datum/component/butchering, 80, 70)
 
 /obj/item/nullrod/armblade/tentacle
-	name = "Нечестивое благословение"
+	name = "нечестивое благословение"
 	icon_state = "tentacle"
 	inhand_icon_state = "tentacle"
 
 /obj/item/nullrod/carp
-	name = "Плюшевый Карп-Си"
+	name = "плюшевый Карп-Си"
 	desc = "Очаровательная мягкая игрушка, напоминающая бога всех карпов. Зубы выглядят довольно острыми. Активируйте его, чтобы получить благословение Карпа-Си."
 	icon = 'icons/obj/plushes.dmi'
 	icon_state = "carpplush"
@@ -725,7 +725,7 @@
 	AddComponent(/datum/component/faction_granter, "carp", holy_role_required = HOLY_ROLE_PRIEST, grant_message = span_boldnotice("You are blessed by Carp-Sie. Wild space carp will no longer attack you."))
 
 /obj/item/nullrod/claymore/bostaff //May as well make it a "claymore" and inherit the blocking
-	name = "Посох монаха"
+	name = "посох монаха"
 	desc = "Длинный высокий посох из полированного дерева. Традиционно используемый в боевых искусствах древней Земли, теперь он используется для преследования клоуна."
 	w_class = WEIGHT_CLASS_BULKY
 	force = 15
@@ -743,7 +743,7 @@
 	righthand_file = 'icons/mob/inhands/weapons/staves_righthand.dmi'
 
 /obj/item/nullrod/tribal_knife
-	icon_state = "Аритмический нож"
+	icon_state = "аритмический нож"
 	desc = "Они говорят, что страх — настоящий убийца разума, но удар ножом в голову тоже работает. Честь обязывает не вкладывать в ножны однажды обнажив."
 	inhand_icon_state = "crysknife"
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
@@ -774,7 +774,7 @@
 			wielder.update_equipment_speed_mods()
 
 /obj/item/nullrod/pitchfork
-	name = "Нечестивые вилы"
+	name = "нечестивые вилы"
 	desc = "Держа это, ты выглядишь абсолютно по дьявольски."
 	icon_state = "pitchfork0"
 	worn_icon_state = "pitchfork0"
@@ -789,7 +789,7 @@
 	sharpness = SHARP_EDGED
 
 /obj/item/nullrod/egyptian
-	name = "Египетский посох"
+	name = "египетский посох"
 	desc = "На посохе вырезано руководство по мумификации. Вы, вероятно, могли бы изготовить обертки, если бы у вас была ткань."
 	icon = 'icons/obj/guns/magic.dmi'
 	icon_state = "pharoah_sceptre"
@@ -803,7 +803,7 @@
 	attack_verb_simple = list("лупит", "бьёт", "атакует")
 
 /obj/item/nullrod/hypertool
-	name = "Гиперинструмент"
+	name = "гиперинструмент"
 	desc = "Инструмент настолько мощный, что даже вы не можете им идеально пользоваться."
 	icon = 'icons/obj/device.dmi'
 	icon_state = "hypertool"
@@ -819,7 +819,7 @@
 	hitsound = 'sound/effects/sparks4.ogg'
 
 /obj/item/nullrod/spear
-	name = "Древнее копье"
+	name = "древнее копье"
 	desc = "Старинное копье из латуни, то есть из золота, то есть из бронзы. Выглядит высокомеханичным."
 	icon = 'icons/obj/clockwork_objects.dmi'
 	icon_state = "ratvarian_spear"

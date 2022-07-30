@@ -120,17 +120,17 @@
 /**** Nanotrasen Approved God ****/
 
 /datum/religion_sect/puritanism
-	name = "Утвержденный NanoTrasen Бог"
+	name = "Утвержденный НаноТрейзен Бог"
 	desc = "Ваша заурядная секта, с ней не связаны никакие выгоды или блага."
-	quote = "NanoTrasen Рекомендует!"
+	quote = "НаноТрейзен Рекомендует!"
 	tgui_icon = "bible"
 
 /**** Mechanical God ****/
 
 /datum/religion_sect/mechanical
-	name = "Технофилия"
-	quote = "Да обретете вы покой в металлической оболочке."
-	desc = "Библии могут заряжать киборгов и исцелять роботизированные конечности, но больше не будут исцелять органиков. \
+	name = "Бог-Машина"
+	quote = "Отриньте слабости плоти и переродитесь в благословенной металлической оболочке!"
+	desc = "Библии могут заряжать киборгов и исцелять роботизированные конечности, но больше не будут исцелять органику. \
 	Батарейки дарят благосклонность в зависимости от того, насколько они заряжены."
 	tgui_icon = "robot"
 	alignment = ALIGNMENT_NEUT
@@ -165,7 +165,7 @@
 	var/obj/item/bodypart/bodypart = blessed.get_bodypart(chap.zone_selected)
 	if(bodypart.status != BODYPART_ROBOTIC)
 		if(!did_we_charge)
-			to_chat(chap, span_warning("[GLOB.deity] насмехается над идеей исцеления такого кожаного ублюдка!"))
+			to_chat(chap, span_warning("[GLOB.deity] насмехается над идеей исцеления бренной плоти!"))
 		else
 			blessed.visible_message(span_notice("[chap] заряжает [blessed] святой силой [GLOB.deity]!"))
 			to_chat(blessed, span_boldnotice("Заряжаюсь святой силой[GLOB.deity]!"))
@@ -191,7 +191,7 @@
 		to_chat(chap,span_notice("[GLOB.deity] не приемлет такого жалкого количества заряда."))
 		return
 	adjust_favor(round(the_cell.charge/300), chap)
-	to_chat(chap, span_notice("Предлагаю заряд [the_cell] [GLOB.deity], угождая ему."))
+	to_chat(chap, span_notice("Жертвую заряд [the_cell] [GLOB.deity]."))
 	qdel(I)
 	return TRUE
 
@@ -199,8 +199,8 @@
 
 /datum/religion_sect/pyre
 	name = "Бог Огня"
-	desc = "Принесение в жертву горящих трупов с большим уроном от горения и свечей дает вам благосклонность. Ваша Библия потеряет свою силу!"
-	quote = "Всё должно гореть! Первобытная энергия должна быть уважаема."
+	desc = "Принесение в жертву горящих трупов с сильными ожоговыми повреждениями и свечей дарует вам благосклонность. Ваша Библия потеряет свою силу!"
+	quote = "И пусть весь Мир горит! И каждый склонится перед Первостихией! В почтении или же в страхе!"
 	tgui_icon = "fire-alt"
 	alignment = ALIGNMENT_NEUT
 	max_favor = 10000
@@ -271,8 +271,8 @@
 #undef GREEDY_HEAL_COST
 
 /datum/religion_sect/honorbound
-	name = "Бог, связанный честью"
-	quote = "Необходим хороший, благородный крестовый поход против зла."
+	name = "Хранитель Чести"
+	quote = "Давно пора бы устроить старый-добрый, благородный крестовый поход против сил зла."
 	desc = "Ваше божество требует от вас честных поединков. Вы не можете нападать на неподготовленных, справедливых или невинных.\
 	Вы зарабатываете благосклонность, привлекая других к крестовому походу, и можете потратить благосклонность на объявление битвы, минуя некоторые условия для нападения"
 	tgui_icon = "scroll"
@@ -308,10 +308,10 @@
 	holy_dna.add_mutation(HONORBOUND)
 
 /datum/religion_sect/burden
-	name = "Наказанный Бог"
-	quote = "Чтобы почувствовать свободу, нужно сначала понять, что такое плен."
-	desc = "Вредите себе любыми возможными способами. Плохие мутации, потерянные конечности, травмы, \
-	и многое другое. Ты узнаешь секреты вселенной из своей поверженной оболочки."
+	name = "Великомученик"
+	quote = "Дабы обрести истинную свободу, нужно самолично ощутить тяжесть цепей."
+	desc = "Познай все грани отчаяния. Прими уродующие мутации, потеряй конечности, искалечь себя травмами, агонизируй от наркотического дурмана. \
+	Самобичевание это искупление. Превзойди грешные слабости плоти и вознесись в величии Души."
 	tgui_icon = "user-injured"
 	altar_icon_state = "convertaltar-burden"
 	alignment = ALIGNMENT_NEUT
@@ -321,10 +321,10 @@
 /datum/religion_sect/burden/on_conversion(mob/living/carbon/human/new_convert)
 	..()
 	if(!ishuman(new_convert))
-		to_chat(span_warning("[GLOB.deity] нуждается в существах более высокого уровня, чтобы полностью понять страдания. Я не обременен."))
+		to_chat(span_warning("[GLOB.deity] нуждается в более решительных душах, чтобы полностью осознать страдания. Мой дух слишком слаб для такого..."))
 		return
 	if(TRAIT_GENELESS in new_convert.dna.species.inherent_traits)
-		to_chat(span_warning("[GLOB.deity] не может помочь такому виду, как я, понять страдания. Я не обременен."))
+		to_chat(span_warning("[GLOB.deity] нуждается в существах, способных осознать страдания. Невозможно передать слепцу всю прелесть света."))
 		return
 	var/datum/dna/holy_dna = new_convert.dna
 	holy_dna.add_mutation(/datum/mutation/human/burdened)
@@ -334,16 +334,16 @@
 		return FALSE
 	var/datum/mutation/human/burdened/burdenmut = burdened.dna.check_mutation(/datum/mutation/human/burdened)
 	if(burdenmut)
-		return "Я нахожусь на [burdenmut.burden_level]/6 уровне бремени."
-	return "Я не обременен."
+		return "Я нахожусь на [burdenmut.burden_level]/6 уровне постижения."
+	return "Я не страдалец."
 
 #define MINIMUM_YUCK_REQUIRED 5
 
 /datum/religion_sect/maintenance
 	name = "Бог Техов"
 	quote = "Твое царство во тьме."
-	desc = "Пожертвуйте органической суспензией, созданной из крыс, окунутых в сварочное топливо, чтобы получить благосклонность. \
-	Ритуалы позволят адаптироваться к шахтам обслуживания."
+	desc = "Пожертвуйте органическим концентратом, созданным из крыс, окунутых в сварочное топливо, чтобы получить благосклонность. \
+	Ритуалы позволят адаптироваться к техническим туннелям."
 	tgui_icon = "eye"
 	altar_icon_state = "convertaltar-maint"
 	alignment = ALIGNMENT_EVIL //while maint is more neutral in my eyes, the flavor of it kinda pertains to rotting and becoming corrupted by the maints
@@ -355,10 +355,10 @@
 		return TRUE
 	var/mob/living/carbon/human/blessed = blessed_living
 	if(blessed.reagents.has_reagent(/datum/reagent/drug/maint/sludge))
-		to_chat(blessed, span_warning("[GLOB.deity] уже уполномочил меня."))
+		to_chat(blessed, span_warning("[GLOB.deity] уже причастил меня."))
 		return TRUE
 	blessed.reagents.add_reagent(/datum/reagent/drug/maint/sludge, 5)
-	blessed.visible_message(span_notice("[chap] уполномочивает [blessed] святой силой [GLOB.deity]!"))
+	blessed.visible_message(span_notice("[chap] причащает [blessed] святой силой [GLOB.deity]!"))
 	to_chat(blessed, span_boldnotice("Святая сила [GLOB.deity] на какое-то время сделала меня менее восприимчивым к ранениям!"))
 	playsound(chap, "punch", 25, TRUE, -1)
 	SEND_SIGNAL(blessed, COMSIG_ADD_MOOD_EVENT, "blessing", /datum/mood_event/blessing)
@@ -370,9 +370,9 @@
 	var/datum/reagent/yuck/wanted_yuck = offering.reagents.has_reagent(/datum/reagent/yuck, MINIMUM_YUCK_REQUIRED)
 	var/favor_earned = offering.reagents.get_reagent_amount(/datum/reagent/yuck)
 	if(!wanted_yuck)
-		to_chat(user, span_warning("[offering] не имеет достаточного количества органической суспензии для [GLOB.deity]."))
+		to_chat(user, span_warning("[offering] не имеет достаточного количества органическго концентрата для [GLOB.deity]."))
 		return
-	to_chat(user, span_notice("[GLOB.deity] любит органическую суспензию."))
+	to_chat(user, span_notice("[GLOB.deity] любит органический концентрат."))
 	adjust_favor(favor_earned, user)
 	playsound(get_turf(offering), 'sound/items/drink.ogg', 50, TRUE)
 	offering.reagents.clear_reagents()
@@ -382,7 +382,7 @@
 
 /datum/religion_sect/spar
 	name = "Бог Спарринга"
-	quote = "Твой следующий взмах должен быть быстрее, неофит. Закаляй свое сердце"
+	quote = "Каждый твой следующий взмах должен быть быстрее, неофит. Закаляй свое сердце."
 	desc = "Спаррингуйтесь с другими членами экипажа, чтобы получить благосклонность или другие награды.\
 	Ритуалы позволят закалить тело для реальных битв."
 	tgui_icon = "fist-raised"
