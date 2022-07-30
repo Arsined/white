@@ -18,7 +18,7 @@
 /obj/item/storage/book/attack_self(mob/user)
 	to_chat(user, span_notice("Страницы [title] вырезаны!"))
 
-GLOBAL_LIST_INIT(biblenames, list("Библия", "Коран", "Scrapbook", "Горящая Библия", "Клоунская Библия", "Банановая Библия", "Крипер Библия", "Белая Библия", "Святое сияние", "Божья Иллюзия", "Том", "Король в желтом", "Итаква", "Саентология", "Расплавленная Библия", "Некрономикон", "Изоляционизм", "Гуру Грантх Сахиб"))
+GLOBAL_LIST_INIT(biblenames, list("Библия", "Коран", "Альбом", "Горящая Библия", "Клоунская Библия", "Банановая Библия", "Крипер Библия", "Белая Библия", "Святое сияние", "Божья Иллюзия", "Том", "Король в желтом", "Итаква", "Саентология", "Расплавленная Библия", "Некрономикон", "Изоляционизм", "Гуру Грантх Сахиб"))
 //If you get these two lists not matching in size, there will be runtimes and I will hurt you in ways you couldn't even begin to imagine
 // if your bible has no custom itemstate, use one of the existing ones
 GLOBAL_LIST_INIT(biblestates, list("bible", "koran", "scrapbook", "burning", "honk1", "honk2", "creeper", "white", "holylight", "atheist", "tome", "kingyellow", "ithaqua", "scientology", "melted", "necronomicon", "insuls", "gurugranthsahib"))
@@ -31,7 +31,7 @@ GLOBAL_LIST_INIT(bibleitemstates, list("bible", "koran", "scrapbook", "burning",
 	return 0
 
 /obj/item/storage/book/bible
-	name = "Библия"
+	name = "библия"
 	desc = "Приложите к голове или по голове."
 	icon = 'icons/obj/storage.dmi'
 	icon_state = "bible"
@@ -142,7 +142,7 @@ GLOBAL_LIST_INIT(bibleitemstates, list("bible", "koran", "scrapbook", "burning",
 		return
 
 	if (HAS_TRAIT(user, TRAIT_CLUMSY) && prob(50))
-		to_chat(user, span_danger("[capitalize(src.name)] выскальзывает из рук и падает на голову."))
+		to_chat(user, span_danger("[capitalize(src.name)] выскальзывает из рук и бьёт меня по голове."))
 		user.take_bodypart_damage(10)
 		user.Unconscious(400)
 		return
@@ -289,9 +289,9 @@ GLOBAL_LIST_INIT(bibleitemstates, list("bible", "koran", "scrapbook", "burning",
 		to_chat(H, span_userdanger("Пытаюсь открыть книгу НО ОНА КУСАЕТСЯ!"))
 		playsound(src.loc, 'sound/effects/snap.ogg', 50, TRUE)
 		H.apply_damage(5, BRUTE, pick(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM))
-		to_chat(H, span_notice("Ваше имя написано на внутренней стороне обложки кровью.."))
+		to_chat(H, span_notice("Мое имя написано на внутренней стороне обложки кровью."))
 		var/ownername = H.real_name
-		desc += span_warning("Имя [ownername] написано на внутренней стороне обложки кровью.")
+		desc += span_warning("На внутренней стороне обложки заметно выведенное кровью имя [ownername].")
 
 /obj/item/storage/book/bible/syndicate/attack(mob/living/M, mob/living/carbon/human/user, heal_mode = TRUE)
 	if (user.a_intent == INTENT_HELP)
