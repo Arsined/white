@@ -73,21 +73,21 @@
 
 
 /obj/item/storage/box/holy/clock
-	name = "забытый набор"
+	name = "Забытый набор"
 
 /obj/item/storage/box/holy/clock/PopulateContents()
 	new /obj/item/clothing/head/helmet/chaplain/clock(src)
 	new /obj/item/clothing/suit/armor/riot/chaplain/clock(src)
 
 /obj/item/storage/box/holy
-	name = "набор Тамплиера"
+	name = "Набор Тамплиера"
 
 /obj/item/storage/box/holy/PopulateContents()
 	new /obj/item/clothing/head/helmet/chaplain(src)
 	new /obj/item/clothing/suit/armor/riot/chaplain(src)
 
 /obj/item/storage/box/holy/student
-	name = "набор Оскверненного Ученого"
+	name = "Набор Оскверненного Ученого"
 
 /obj/item/storage/box/holy/student/PopulateContents()
 	new /obj/item/clothing/suit/armor/riot/chaplain/studentuni(src)
@@ -110,7 +110,7 @@
 	dynamic_hair_suffix = ""
 
 /obj/item/storage/box/holy/sentinel
-	name = "набор Каменного Стража"
+	name = "Набор Каменного Стража"
 
 /obj/item/storage/box/holy/sentinel/PopulateContents()
 	new /obj/item/clothing/suit/armor/riot/chaplain/ancient(src)
@@ -129,7 +129,7 @@
 	inhand_icon_state = "knight_ancient"
 
 /obj/item/storage/box/holy/witchhunter
-	name = "набор Охотника на Ведьм"
+	name = "Набор Охотника на Ведьм"
 
 /obj/item/storage/box/holy/witchhunter/PopulateContents()
 	new /obj/item/clothing/suit/armor/riot/chaplain/witchhunter(src)
@@ -150,7 +150,7 @@
 	flags_inv = null
 
 /obj/item/storage/box/holy/adept
-	name = "набор Божественного Адепта"
+	name = "Набор Божественного Адепта"
 
 /obj/item/storage/box/holy/adept/PopulateContents()
 	new /obj/item/clothing/suit/armor/riot/chaplain/adept(src)
@@ -171,7 +171,7 @@
 	inhand_icon_state = "crusader"
 
 /obj/item/storage/box/holy/follower
-	name = "набор Последователей Капеллана"
+	name = "Набор Последователей Капеллана"
 
 /obj/item/storage/box/holy/follower/PopulateContents()
 	new /obj/item/clothing/suit/hooded/chaplain_hoodie/leader(src)
