@@ -189,7 +189,7 @@
 	return TRUE
 
 
-/datum/component/personal_crafting/proc/construct_item(atom/a, datum/crafting_recipe/R)
+/datum/component/personal_crafting/proc/construct_item(mob/a, datum/crafting_recipe/R)
 	var/list/contents = get_surroundings(a,R.blacklist)
 	var/send_feedback = 1
 	if(check_contents(a, R, contents))
@@ -199,7 +199,7 @@
 					if(istype(content, R.result))
 						return ", уже создано."
 			//If we're a mob we'll try a do_after; non mobs will instead instantly construct the item
-			if(ismob(a) && !do_after(a, R.time, target = a))
+			if(ismob(a) && !do_after(a, R.time*a.mind.get_skill_modifier(/datum/skill/engineering, SKILL_SPEED_MODIFIER), target = a))
 				return "."
 			contents = get_surroundings(a,R.blacklist)
 			if(!check_contents(a, R, contents))
@@ -438,6 +438,7 @@
 				else
 					result.forceMove(user.drop_location())
 				to_chat(user, span_notice("[crafting_recipe.name] создано."))
+				user.mind.adjust_experience(/datum/skill/engineering, crafting_recipe.time)
 				user.investigate_log("[key_name(user)] crafted [crafting_recipe]", INVESTIGATE_CRAFTING)
 				crafting_recipe.on_craft_completion(user, result)
 			else
