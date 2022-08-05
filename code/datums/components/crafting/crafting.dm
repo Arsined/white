@@ -189,9 +189,10 @@
 	return TRUE
 
 
-/datum/component/personal_crafting/proc/construct_item(mob/a, datum/crafting_recipe/R)
+/datum/component/personal_crafting/proc/construct_item(atom/a, datum/crafting_recipe/R)
 	var/list/contents = get_surroundings(a,R.blacklist)
 	var/send_feedback = 1
+	var/mob/user = usr
 	if(check_contents(a, R, contents))
 		if(check_tools(a, R, contents))
 			if(R.one_per_turf)
@@ -199,7 +200,7 @@
 					if(istype(content, R.result))
 						return ", уже создано."
 			//If we're a mob we'll try a do_after; non mobs will instead instantly construct the item
-			if(ismob(a) && !do_after(a, R.time*a.mind.get_skill_modifier(/datum/skill/engineering, SKILL_SPEED_MODIFIER), target = a))
+			if(ismob(a) && !do_after(a, R.time*user.mind.get_skill_modifier(/datum/skill/engineering, SKILL_SPEED_MODIFIER), target = a))
 				return "."
 			contents = get_surroundings(a,R.blacklist)
 			if(!check_contents(a, R, contents))
