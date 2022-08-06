@@ -899,7 +899,6 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 	else if((tool_behaviour == TOOL_CROWBAR || tool_behaviour == TOOL_MULTITOOL || tool_behaviour == TOOL_SCREWDRIVER || tool_behaviour == TOOL_WELDER || tool_behaviour == TOOL_WIRECUTTER || tool_behaviour == TOOL_WRENCH) && ishuman(user))
 		if(user.mind)
 			skill_modifier = user.mind.get_skill_modifier(/datum/skill/engineering, SKILL_SPEED_MODIFIER)
-			user.mind.adjust_experience(/datum/skill/engineering, delay)
 	delay *= toolspeed * skill_modifier
 
 
@@ -921,7 +920,7 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 		// Invoke the extra checks once, just in case.
 		if(extra_checks && !extra_checks.Invoke())
 			return
-
+	user.mind.adjust_experience(/datum/skill/engineering, (delay / toolspeed / skill_modifier))
 	// Use tool's fuel, stack sheets or charges if amount is set.
 	if(amount && !use(amount))
 		return
