@@ -105,7 +105,7 @@
 				syringe.updateEmbedding()
 				syringe.tryEmbed(O, TRUE, TRUE)
 				H.update_damage_overlays()
-				H.emote("agony")
+
 				
 	H.apply_damage(damage, BRUTE, picked_def_zone, wound_bonus = CANT_WOUND)
 
