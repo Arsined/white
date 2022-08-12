@@ -89,21 +89,20 @@
 			span_danger("[H] наступает на [parent]."),
 			span_userdanger("Наступаю на [parent]!")
 		)
+		var/atom/A=parent
 		if(isatom(parent))
-	 	var/atom/A=parent
 			if(A.reagents)
 				var/datum/reagents/R = A.reagents
 				if(!R.total_volume)
 					H.transfer_blood_to(A, 2)
 				else if(H.is_injectable(H) && H && (H.reagents.total_volume <= H.reagents.maximum_volume)) 
 					R.trans_to(H, 2, transfered_by = H, methods = INJECT)
-				if(rand(0,2)==0)
-					var/obj/item/bent_rod/syringe = A
-					syringe.add_blood_DNA(H.return_blood_DNA())
-					syringe.embedding = list("pain_mult" = 1, "embed_chance" = 90, "fall_chance" = 10)
-					syringe.updateEmbedding()
-					syringe.tryEmbed(O, TRUE, TRUE)
-					H.update_damage_overlays()
+				var/obj/item/bent_rod/syringe = A
+				syringe.add_blood_DNA(H.return_blood_DNA())
+				syringe.embedding = list("pain_mult" = 1, "embed_chance" = 30, "fall_chance" = 70)
+				syringe.updateEmbedding()
+				syringe.tryEmbed(O, TRUE, TRUE)
+				H.update_damage_overlays()
 
 				
 	H.apply_damage(damage, BRUTE, picked_def_zone, wound_bonus = CANT_WOUND)
