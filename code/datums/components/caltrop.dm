@@ -98,7 +98,6 @@
 				else if(H.is_injectable(H) && H && (H.reagents.total_volume <= H.reagents.maximum_volume)) 
 					R.trans_to(H, 2, transfered_by = H, methods = INJECT)
 				var/obj/item/bent_rod/syringe = A
-				syringe.add_blood_DNA(H.return_blood_DNA())
 				syringe.embedding = list("pain_mult" = 1, "embed_chance" = 30, "fall_chance" = 70)
 				syringe.updateEmbedding()
 				syringe.tryEmbed(O, TRUE, TRUE)
