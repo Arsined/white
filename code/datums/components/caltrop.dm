@@ -89,7 +89,7 @@
 			span_danger("[H] наступает на [parent]."),
 			span_userdanger("Наступаю на [parent]!")
 		)
-		var/atom/A=parent
+		var/atom/A = parent
 		if(isatom(parent))
 			if(A.reagents)
 				var/datum/reagents/R = A.reagents
